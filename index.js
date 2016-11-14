@@ -4,18 +4,18 @@ evens.forEach (even => {
  console.log (`${even} is not odd!`)
 })
 
-evens.forEach((even, index, array) {
+evens.forEach((even, index, array) => {
   debugger
-  console.log (`${even} is not odd`);
+  console.log (`${even} is not odd!`);
 })
 
-function square(n){
-  console.log (n*n)
+function square(n) {
+  console.log (n * n)
 }
 
 evens.forEach(square);
 
-function doToEvens (callback) {
+function doToEvens(callback) {
   evens.forEach(callback)
 }
 
@@ -23,12 +23,13 @@ function doToElementsInArray (array, callback) {
   array.forEach(callback)
 }
 
+
 function changeCompletely(element, index, array) {
-  array[index] = (Math.random()*100).toString()+ "!!!"
+  array[index] = (Math.random() * 100).toString() + '!!!'
 }
 
-var animals = ["dog","fish","cat"]
+var animals = ["dog", "fish", "cat"]
 
 doToElementsInArray(animals, changeCompletely)
 
-console.log(animals);
+console.log(animals)
